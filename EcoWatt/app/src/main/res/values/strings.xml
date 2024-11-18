@@ -48,4 +48,11 @@
     <string name="Login">Login</string>
     <string name="Email">E-mail</string>
     <string name="Senha">Senha</string>
+    <string name="Consumo">CONSUMO EM TEMPO REAL</string>
+    <string name="OPA">24</string>
+    <string name="opa2">kW/h\n</string>
+    <string name="vazio" />
+    <string name="ConsumoTotal">CONSUMO TOTAL</string>
+    <string name="valor">152,2</string>
+    <string name="Outubro">Out/2024</string>
 </resources>
