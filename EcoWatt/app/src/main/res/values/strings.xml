@@ -56,4 +56,7 @@
     <string name="valor">152,2</string>
     <string name="Outubro">Out/2024</string>
     <string name="HistoricoConsumo">HISTORICO DE CONSUMO</string>
+    <string name="AlertasConsumo">ALERTAS DE CONSUMO</string>
+    <string name="Opa3" />
+    <string name="Opa4">252,2</string>
 </resources>
