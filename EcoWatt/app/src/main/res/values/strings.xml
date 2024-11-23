@@ -65,4 +65,5 @@
     <string name="Escreva2">Escreva</string>
     <string name="Listar">Listar</string>
     <string name="Deletar">Deletar</string>
+    <string name="Atualizar">Atualizar</string>
 </resources>

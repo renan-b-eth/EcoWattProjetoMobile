@@ -3,6 +3,7 @@ package com.example.ecowatt
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.EditText
@@ -37,6 +38,22 @@ class HistoricoConsumo : AppCompatActivity() {
         val button = findViewById<Button>(R.id.btnInserir)
         val button2 = findViewById<Button>(R.id.btnListar)
         val editText2 = findViewById<EditText>(R.id.edtInserir)
+        val buttonExcluir = findViewById<Button>(R.id.btnDeletar)
+
+        buttonExcluir.setOnClickListener {
+            val nomeParaExcluir = editText2.text.toString()
+
+            val db = FirebaseFirestore.getInstance()
+            db.collection("consumos")
+                .whereEqualTo("consumo", nomeParaExcluir)
+                .get()
+                .addOnSuccessListener { querySnapshot ->
+                    for (document in querySnapshot.documents) {
+                        document.reference.delete()
+                        Toast.makeText(this, "Documento Deletado", Toast.LENGTH_SHORT).show();
+                    }
+                }
+        }
 
         button.setOnClickListener{
             Toast.makeText(this, "Consumo Inserido com Sucesso", Toast.LENGTH_SHORT).show();
@@ -44,11 +61,14 @@ class HistoricoConsumo : AppCompatActivity() {
         }
 
         button2.setOnClickListener{
-            val texto = editText2.text.toString()
+            val novoValor = editText2.text.toString()
+            val campoAtulizar = "campoAtulizar"
+
             val db = FirebaseFirestore.getInstance()
-            val documentReference = db.collection("consumos").document("21IOHzeIOXIoOUMJNVi6")
-            val dataToUpdate = mutableMapOf<String, Any>()
-            dataToUpdate["consumo"] = texto
+            val docRef = db.collection("consumos").document("Teste")
+
+            docRef.update(campoAtulizar, novoValor)
+
 
 
         }
