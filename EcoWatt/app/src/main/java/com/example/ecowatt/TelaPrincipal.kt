@@ -1,10 +1,14 @@
 package com.example.ecowatt
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
+import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -63,7 +67,15 @@ class TelaPrincipal : AppCompatActivity() {
                 }
             }
         }
+
+        val button = findViewById<Button>(R.id.btnHistorico)
+        button.setOnClickListener {
+                val intent = Intent(this, HistoricoConsumo::class.java)
+                startActivity(intent)
+        }
     }
+
+
 
 
 }

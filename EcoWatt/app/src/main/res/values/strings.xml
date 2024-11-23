@@ -59,4 +59,10 @@
     <string name="AlertasConsumo">ALERTAS DE CONSUMO</string>
     <string name="Opa3" />
     <string name="Opa4">252,2</string>
+    <string name="Inserir" />
+    <string name="Inserir2">Inserir</string>
+    <string name="Escreva" />
+    <string name="Escreva2">Escreva</string>
+    <string name="Listar">Listar</string>
+    <string name="Deletar">Deletar</string>
 </resources>
